@@ -190,6 +190,7 @@ export class AuthorizationService {
   }
 
   completeAuthorizationRequest(): Promise<TokenResponse> {
+    console.log('in complete authorization request');
     return new Promise((resolve, reject) => {
       this._serviceConfigs
       .pipe(filter((value: any) => value != null))
